@@ -1,7 +1,9 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, total={6.5in, 9in}]{geometry}
-\usepackage{graphicx}
-\usepackage{placeins}
+\usepackage{placeins}           % anchored tables and figures
+\usepackage{enumitem}
+\setlist[enumerate]{nosep}           % for numbered lists
+\usepackage{longtable}          % span table over multiple pages
 
 \RequirePackage{mathptmx} 							
 %Set the font to Times New Roman. This package also alters the math-mode font to TNR.
@@ -15,7 +17,6 @@
 \date{April 09, 2020}
 
 \begin{document}
-
 \maketitle
 
 This case study investigates the ethical conduct and social responsibility of the Commonwealth Bank of Australia (CBA).
@@ -49,12 +50,12 @@ Bond Street Custodians Limited & Financial services \cite{bloomberg-bond} & 0.59
 \end{table}
 \FloatBarrier
 
-%3.	What influence do you think the major shareholders will have on the Board? (150 worcs, 10%)
-%Accurately identifies the shareholders and Directors, and provides considerable detail of them and provides an excellent analysis of their involvement in the firm.
+%3.	What influence do you think the major shareholders will have on the Board? 
 The majority of these large shareholders are in the banking, commercial services and financial services industries. They influence the board by deciding who become board members, through a vote. CBA’s larger shareholders may prefer board members who are trusted by those in the aforementioned industries. Shareholders participating in the same industry may also have aligned interests, opinions about directors and therefore voting behaviour.
 \\
 
-%2.	Are any Directors involved in other companies? 
+%2.	Are any Directors involved in other companies? (150 worcs, 10%)
+%Accurately identifies the shareholders and Directors, and provides considerable detail of them and provides an excellent analysis of their involvement in the firm.
 There are 10 members in the Board of Directors in the various committees for risk, audit, nominations, and people and renumeration. Two directors are executive, the remaining non-executive directors. Most interestingly, Shirish Apte, an Independent Non-Executive Director, previously worked in executive roles for Citi Asia \cite{cba19}. It may be purely coincidental that Citicorp Nominees Pty Ltd owns 6.04\% of the company.
 
 
@@ -62,7 +63,57 @@ There are 10 members in the Board of Directors in the various committees for ris
 %4.	Read Commonwealth Bank Code of Conduct and Ethics, and list as many breaches of its own code of ethics that Commonwealth has made in the past 5 years that you can find. What have been the implications of these breaches to the Commonwealth Bank (250 words, 25%)
 %Answer is insightful and with a very high level of detail. Provides a solid list of breaches and implications are well researched and analysed.
 
+The CBA Code of Conduct and Ethics claims to guide how decisions are made within the company. Most notably, it defines Value Expectations that the company is guided by. These values are "what we do is right", "we are accountable", "we are dedicated to service", "we pursue excellence", and "we get things done" \cite{code-of-conduct}. The following breaches of this Code of Conduct is described in Table~\ref{tab:breaches}.
 
+
+\begin{longtable}{|p{2cm}|p{4cm}|p{4.5cm}|p{4.5cm}|} 
+\caption{Examples of CBA breaching the Value Expectations}
+\label{tab:breaches}
+\hline
+% longtable formatting of headers over multiple pages
+\textbf{Value} & \textbf{Explanation of value} & \textbf{Breach examples} & \textbf{Implications of breaches} \hline \endfirsthead
+
+\multicolumn{4}{c}
+        {Table \thetable\ continued from previous page} \\
+        \hline
+\textbf{Value} & \textbf{Explanation of value} & \textbf{Breach examples} & \textbf{Implications of breaches}
+\hline \endhead
+%
+\multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+%
+\endlastfoot
+
+% Table data
+What we do is right & Delivering the best possible outcome for customers with integrity and transparency 
+    & \begin{enumerate}
+        \item Covered up corrupt financial planners that did not deliver the good outcomes for customers \cite{barker17}
+      \end{enumerate} 
+    
+    & Did not act with transparency and honesty. Was fined  \\
+\hline
+We are accountable  & CBA should be held accountable for their actions and follow through with their responsibilities &  Financial planning customers could not seek guidance after significant investment loss with CBA financial planners \cite{barker17}
+& The Banking Royal Commission was created by the Australian Government to investigate banks such as CBA and hold them accountable for misconduct. \\ 
+\hline
+We are dedicated to service & Care for the customer and serve them by doing the right thing & \begin{enumerate}
+        \item Incentivised unethical behaviour of financial planners by rewarding it with commissions and bonuses for high performances \cite{gordon18}
+        \item Created a performance based sales culture for financial planners that did not align with doing right by custoemrs \cite{gordon18}
+    \end{enumerate}
+    & \begin{enumerate}
+        \item Financial planners were not acting on the best interests of customers, often putting investments into high risk and high reward funds
+    \end{enumerate} \\
+\hline
+We pursue excellence & Provide a service with high standard of quality, encourage constructive feedback and learn from mistakes 
+    & \begin{enumerate}
+        \item Appointed Matt Comyn as CEO, despite his possible involvement with anti-money laundering scandal \cite{dickson18}
+    \end{enumerate} 
+    & \begin{enumerate}
+        \item CBA looks to still put profit before customers and did not learn from mistakes \cite{dickson18}
+    \end{enumerate}\\
+\hline
+We get things done & Fix problems quickly, make timely decisions and focus on great outcomes & & \\
+\hline
+\end{longtable}
 
 \section{Reliance on Information Systems and Respective Governance}
 %5.	Given Commonwealth bank reliance on Information Systems (customer security, money transfers etc), to what extent does the Commonwealth Bank's Code of Conduct and Ethics specifically include IS Governance? How would Commonwealth Bank's Code of Conduct and Ethics be improved in relation to IT Governance? How could increasing the level of IT Governance to Commonwealth Bank's Code of Conduct and Ethics add value (both tangible and intangible) and reduce risk (in terms of operation risk and systematic risk) to the bank? Briefly explain your reasoning and include illustrative examples to reinforce your point of view. (200 words, 25%)
